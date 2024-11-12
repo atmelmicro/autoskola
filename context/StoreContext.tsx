@@ -47,6 +47,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setReports(prev => [...prev, report]);
   };
 
+  const makePayment = (student: Student) => {
+    student.platba!.splnena = true;
+    setStudents(prev => [...prev])
+  };
+
   const value = {
     students,
     instructors,
@@ -62,6 +67,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     addDrivingLesson,
     addPayment,
     addReport,
+    makePayment
   };
 
   return (

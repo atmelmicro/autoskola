@@ -23,4 +23,5 @@ export interface StoreContextType {
   addDrivingLesson: (lesson: DrivingLesson) => void;
   addPayment: (payment: Payment) => void;
   addReport: (report: Report) => void;
+  makePayment: (student: Student) => void;
 } 
